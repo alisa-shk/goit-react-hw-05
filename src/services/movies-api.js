@@ -28,3 +28,22 @@ export const searchMovies = async (query) => {
     return response.data.results;
 }
 
+export const fetchMovieDetails = async (movieId) => {
+    const url = `${BASE_URL}/movie/${movieId}`;
+    const response = await axios.get(url, options);
+    return response.data;
+}
+
+export const fetchMovieCast = async (movieId) => {
+    const url = `${BASE_URL}/movie/${movieId}/credits`;
+    const response = await axios.get(url, options);
+    return response.data.cast;
+}
+
+export const fetchMovieReviews = async (movieId) => {
+    const url = `${BASE_URL}/movie/${movieId}/reviews`;
+    const response = await axios.get(url, options);
+    return response.data.results;
+}
+
+
