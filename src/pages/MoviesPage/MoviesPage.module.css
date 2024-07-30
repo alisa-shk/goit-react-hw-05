@@ -1,0 +1,22 @@
+.page {
+    padding-left: 16px;
+}
+
+.form {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.input {
+    border: 1px solid gray;
+    border-radius: 4px;
+    height: 36px;
+    font-size: 16px;
+}
+
+.btn {
+    background-color: rgba(251, 106, 54, 0.739);
+    font-size: 16px;
+    color: rgb(57, 57, 57);
+}

@@ -12,7 +12,6 @@ const options = {
 export const fetchTrendingMovies = async () => { 
     const url = `${BASE_URL}/trending/movie/day`;
     const response = await axios.get(url, options);
-    console.log(response.data.results);
     return response.data.results;
 }
 

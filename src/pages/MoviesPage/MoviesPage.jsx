@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import MovieList from "../components/MovieList/MovieList";
-import { searchMovies } from "../services/movies-api";
+import MovieList from "../../components/MovieList/MovieList";
+import { searchMovies } from "../../services/movies-api";
 import { useSearchParams } from "react-router-dom";
+import s from "./MoviesPage.module.css";
 
 const MoviesPage = () => {
 
@@ -31,14 +32,14 @@ const MoviesPage = () => {
     };
 
     return (
-        <>
+        <div className={s.page}>
             <h1>Movies</h1>
-            <form onSubmit={handleSearch}>
-                <input type="text" name="query" />
-                <button type="submit">Search</button>
+            <form onSubmit={handleSearch} className={s.form}>
+                <input type="text" name="query" className={s.input} />
+                <button type="submit" className={s.btn}>Search</button>
             </form>
             <MovieList movies={movies} />
-        </>
+        </div>
     )
 };
 

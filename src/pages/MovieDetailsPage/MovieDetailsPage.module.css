@@ -1,5 +1,35 @@
-.details {
+.list {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    padding-left: 24px;
+}
+
+.movieBox {
+    padding-left: 20px;
+    padding-bottom: 12px;
+    display: flex;
+    gap: 20px;
+}
+
+.page {
+    padding-bottom: 40px;
+}
+
+.name {
+    color: rgb(248, 103, 50);
+    font-size: 32px;
+}
+
+.add {
+    padding-left: 20px;
+    color: rgb(248, 106, 55);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.addBox {
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 20px;
 }

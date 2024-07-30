@@ -2,11 +2,15 @@
     list-style-type: none;
     display: flex;
     gap: 20px;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    box-shadow: 0px 4px 6px 0px rgba(44, 43, 43, 0.337);
 }
 
 
 .link {
     text-decoration: none;
+    color: black;
 }
 
 .active {

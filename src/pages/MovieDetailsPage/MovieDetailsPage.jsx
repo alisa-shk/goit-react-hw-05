@@ -24,17 +24,25 @@ const MovieDetailsPage = () => {
     if (!movie) return <span>Loading...</span>;
 
     return (
-        <div>
-            <Link to={backLinkRef.current}>Go back</Link>
-            <h1>{movie.original_title}</h1>
-            <div>
-                <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.original_title} />
-                <p>{movie.overview}</p>
+        <div className={s.page}>
+            <div className={s.movieBox}>
+                <div>
+                    <Link to={backLinkRef.current}>Go back</Link>
+                    <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.original_title} />
+                </div>
+                <div>
+                    <h2 className={s.name}>{movie.original_title}</h2>
+                    <h3>Overview</h3>
+                    <p>{movie.overview}</p>
+                </div>
             </div>
-            <nav className={s.details}>
-                <NavLink to="cast">Cast</NavLink>
-                <NavLink to="reviews">Reviews</NavLink>
-            </nav>
+            <div className={s.addBox}>
+                <p className={s.add}>Additional information</p>
+                <nav className={s.list}>
+                    <NavLink to="cast">Cast</NavLink>
+                    <NavLink to="reviews">Reviews</NavLink>
+                </nav>
+            </div>
             <Outlet />
         </div>
     )
